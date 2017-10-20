@@ -1,3 +1,3 @@
-# SideProject
-This repository contains files for final project of diploma
-#Learnspace 
+#TestRepository
+This repository contains files for testing repository
+
