@@ -2,8 +2,10 @@ body{
 background-image: url("bg2.jpg");
 }
 
-#boby{
+#main{
+margin-top:-20px;
 background-color: white;
+
 }
 
 .navbar-default {
@@ -15,7 +17,12 @@ background-color:darkred;
 
 .nav.navbar-nav li a {
 color: white;
-
+font-family:verdana;
+font-weight: bold;
+}
+.nav.navbar-nav li a:hover{
+color: darkred;
+background-color:white;
 }
 
 header {
@@ -29,7 +36,7 @@ height: 100px;
 
 .stylish-input-group .input-group-addon{
     
-background: white !important; 
+background: white; 
 
 }
 
