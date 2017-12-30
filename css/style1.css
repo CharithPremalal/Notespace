@@ -2,8 +2,15 @@ div.scroll {
     height: 300px;
     overflow: scroll;
 }
+#friend:active  {
+    background-color:cyan;
+}
+#friend:hover  {
+    background-color:cyan;
+}
+#box{
 
-
+}
 .top {
   text-align: center;
 }
