@@ -1,7 +1,7 @@
 <!DOCtype html>
 <html>
 <head>
-  <titel>Rich text editer</titel>
+  <title>Rich text editer</title>
   <style>
     div#textEditor{
 
@@ -19,7 +19,7 @@
       padding: 10px;
       background-color: rgb(40,110,89);
       color: white;
-      
+
     }
     div#richTextArea{
       border: 2px solid rgb(16, 13, 228);
@@ -53,10 +53,17 @@
 }
 
 .btn {
+<<<<<<< HEAD:textEditor001.html
   border: 0px solid transparent;
   color: gray;
   background-color: transparent;
   padding: 0px 0px;
+=======
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 8px;
+>>>>>>> 87676af222e0e572debbc4c8346f0dc33e8ba8da:edi.html
   border-radius: 8px;
   font-size: 10px;
   font-weight: bold;
@@ -79,7 +86,7 @@ input[type=text] {
     font-size: 1em;
     font-weight: bold;
     font-family: cursive;
-    
+
 }
 .button {
     background-color: transparent;
@@ -124,7 +131,7 @@ input[type=text] {
 .dropdown {
     position: relative;
     display: inline-block;
-    
+
 }
 
 .dropdown-content {
@@ -230,10 +237,6 @@ input[type=text] {
    <div id="textEditor">
       <div id="theRibbon">
           <input type="submit" class="button" value="Submit">
-          <div class="upload-btn-wrapper">
-            <input type="image" class="btn" src="Very-Basic-Paper-Clip-icon.png" name="image" width="20" height="25">
-             <input type="file" name="myfile" />
-          </div>
           <div class="dropdown">
               <button onclick="myFunction()" class="dropbtn">A</button>
                 <div id="myDropdown" class="dropdown-content">
@@ -246,7 +249,7 @@ input[type=text] {
                     <button id="strikeButton" title="Strikethrough"><s>abc</s></button>
                     <button id="orderedListButton" title="Numbered list">(i)</button>
                     <button id="unorderedListButton" title="Bulleted list">&bull;</button><br>
-                    
+
                       <button id="linkButton" title="Create Link">Link</button>
                       <button id="unLinkButton" title="Remove Link">Unlink</button><br>
                       <button id="undoButton" title="Undo the previous action">&larr;</button>
@@ -254,18 +257,18 @@ input[type=text] {
                     </div>
                 </div>
               </div>
-              
+
               <script>
-              /* When the user clicks on the button, 
+              /* When the user clicks on the button,
               toggle between hiding and showing the dropdown content */
               function myFunction() {
                   document.getElementById("myDropdown").classList.toggle("show");
               }
-              
+
               // Close the dropdown if the user clicks outside of it
               window.onclick = function(event) {
                 if (!event.target.matches('.dropbtn')) {
-              
+
                   var dropdowns = document.getElementsByClassName("dropdown-content");
                   var i;
                   for (i = 0; i < dropdowns.length; i++) {
@@ -296,11 +299,14 @@ input[type=text] {
                     }
                   </script>
                 </select>
-          
-          
+
+          <div class="upload-btn-wrapper">
+             <button class="btn">Upload a file</button>
+             <input type="file" name="myfile" />
+          </div>
        </div>
        <input type="text" id="fname" name="fname" placeholder="Titel">
-       <input type="text" id="fname" name="fname" placeholder="Subject"> 
+       <input type="text" id="fname" name="fname" placeholder="Subject">
     <div id="richTextArea">
        <iframe id="theWYSIWYG" name="theWYSIWYG" frameborder="0" ></iframe>
     </div>
