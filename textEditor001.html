@@ -1,7 +1,7 @@
 <!DOCtype html>
 <html>
 <head>
-  <titel>Rich text editer</titel>
+  <title>Rich text editer</title>
   <style>
     div#textEditor{
 
@@ -19,7 +19,7 @@
       padding: 10px;
       background-color: rgb(40,110,89);
       color: white;
-      
+
     }
     div#richTextArea{
       border: 2px solid rgb(16, 13, 228);
@@ -79,7 +79,7 @@ input[type=text] {
     font-size: 1em;
     font-weight: bold;
     font-family: cursive;
-    
+
 }
 .button {
     background-color: transparent;
@@ -124,7 +124,7 @@ input[type=text] {
 .dropdown {
     position: relative;
     display: inline-block;
-    
+
 }
 
 .dropdown-content {
@@ -242,7 +242,7 @@ input[type=text] {
                     <button id="strikeButton" title="Strikethrough"><s>abc</s></button>
                     <button id="orderedListButton" title="Numbered list">(i)</button>
                     <button id="unorderedListButton" title="Bulleted list">&bull;</button><br>
-                    
+
                       <button id="linkButton" title="Create Link">Link</button>
                       <button id="unLinkButton" title="Remove Link">Unlink</button><br>
                       <button id="undoButton" title="Undo the previous action">&larr;</button>
@@ -250,18 +250,18 @@ input[type=text] {
                     </div>
                 </div>
               </div>
-              
+
               <script>
-              /* When the user clicks on the button, 
+              /* When the user clicks on the button,
               toggle between hiding and showing the dropdown content */
               function myFunction() {
                   document.getElementById("myDropdown").classList.toggle("show");
               }
-              
+
               // Close the dropdown if the user clicks outside of it
               window.onclick = function(event) {
                 if (!event.target.matches('.dropbtn')) {
-              
+
                   var dropdowns = document.getElementsByClassName("dropdown-content");
                   var i;
                   for (i = 0; i < dropdowns.length; i++) {
@@ -292,14 +292,14 @@ input[type=text] {
                     }
                   </script>
                 </select>
-          
+
           <div class="upload-btn-wrapper">
              <button class="btn">Upload a file</button>
              <input type="file" name="myfile" />
           </div>
        </div>
        <input type="text" id="fname" name="fname" placeholder="Titel">
-       <input type="text" id="fname" name="fname" placeholder="Subject"> 
+       <input type="text" id="fname" name="fname" placeholder="Subject">
     <div id="richTextArea">
        <iframe id="theWYSIWYG" name="theWYSIWYG" frameborder="0" ></iframe>
     </div>
