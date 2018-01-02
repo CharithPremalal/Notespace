@@ -102,6 +102,53 @@ input[type=text] {
       transition: all 0.3 linear 0s;
 }
 
+div {
+  text-align: left;
+}
+
+
+.close {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+.close:hover::before, .close:hover::after {
+  background: #e6ecec;
+}
+.close::before, .close::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 50%;
+  top: 50%;
+  left: 50;
+  margin-top: -1px;
+  background: #000;
+}
+.close::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.close::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.close.black::before, .close.black::after {
+  height: 5px;
+  margin-top: -10px;
+}
+.close.blades::before, .close.blades::after {
+  border-radius: 5px 0;
+}
+
 
 .dropbtn {
     background-color:transparent;
@@ -229,6 +276,9 @@ input[type=text] {
 <body>
    <div id="textEditor">
       <div id="theRibbon">
+          <div class="close01">
+              <span class="close blades black" ></span>
+            </div>
           <input type="submit" class="button" value="Submit">
           <div class="upload-btn-wrapper">
             <input type="image" class="btn" src="Very-Basic-Paper-Clip-icon.png" name="image" width="20" height="25">
@@ -296,7 +346,7 @@ input[type=text] {
                     }
                   </script>
                 </select>
-          
+                
           
        </div>
        <input type="text" id="fname" name="fname" placeholder="Titel">
