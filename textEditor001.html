@@ -53,10 +53,10 @@
 }
 
 .btn {
-  border: 2px solid gray;
+  border: 0px solid gray;
   color: gray;
-  background-color: white;
-  padding: 8px 8px;
+  background-color: none;
+  padding: 0px 0px;
   border-radius: 8px;
   font-size: 10px;
   font-weight: bold;
@@ -230,6 +230,10 @@ input[type=text] {
    <div id="textEditor">
       <div id="theRibbon">
           <input type="submit" class="button" value="Submit">
+          <div class="upload-btn-wrapper">
+            <input type="image" class="btn" src="Very-Basic-Paper-Clip-icon.png" name="image" width="20" height="25">
+             <input type="file" name="myfile" />
+          </div>
           <div class="dropdown">
               <button onclick="myFunction()" class="dropbtn">A</button>
                 <div id="myDropdown" class="dropdown-content">
@@ -293,10 +297,7 @@ input[type=text] {
                   </script>
                 </select>
           
-          <div class="upload-btn-wrapper">
-             <button class="btn">Upload a file</button>
-             <input type="file" name="myfile" />
-          </div>
+          
        </div>
        <input type="text" id="fname" name="fname" placeholder="Titel">
        <input type="text" id="fname" name="fname" placeholder="Subject"> 
