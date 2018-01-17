@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/form-elements.css">
+  <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/comment.css">
+  <title>MyNotes</title>
+
+</head>
+<body>
+  <header>
+  <div class="container"><h1><a href="home.html" id="title">NOTE|SPACE</a></h1></div>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="home.html">My Home</a></li>
+        <li><a href="notes.html">My Notes</a></li>
+        <li><a href="groups.html">My Groups</a></li>
+        <li><a href="profile.html">My Profile</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  </header>
+
+<div class="container" id="main" style="position: relative;min-width: 1000px;">
+<h2 class="title">Make An Advertisement</h2>
+<form id="form1" name="form1" method="post" action="inputAdvt.php" enctype="multipart/form-data">
+<table align="center">
+<tr>
+<td>
+  <div class="form-group">
+    <label>Contact Person</label>
+  </div>
+  <div class="form-group">
+    <label>E-mail</label>
+  </div>
+  <div class="form-group">
+    <label>Phone Number</label>
+  </div>
+  <div class="form-group">
+    <label>Company Name</label>
+  </div>
+
+  <div class="form-group">
+    <label>Ad Description</label>
+  </div>
+  <div class="form-group">
+    <label>Attach Image</label>
+  </div>
+  </td>
+<td>
+
+  <div class="form-group">
+    <input type="text" name="fname" id="fname" placeholder="Full Name">
+  </div>
+  <div class="form-group">
+
+    <input type="text" name="email" id="email" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+
+    <input type="text" name="number" id="number">
+  </div>
+  <div class="form-group">
+
+    <input type="text" name="company" id="number">
+  </div>
+
+  <div class="form-group">
+
+    <textarea name="textarea" id="textarea"></textarea>
+  </div>
+  <div class="form-group">
+  <input type="file" name="advt">
+
+  </div>
+
+
+  </td>
+</tr>
+<tr><td>
+  <div class="form-group">
+    <input type="reset" name="reset" id="reset" value="Clear">          <input type="submit" name="submit" id="submit" value="Submit">
+  </div>
+</td>
+  </tr>
+  </table>
+  </form>
+</div>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
