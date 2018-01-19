@@ -4,11 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='http://cdn.quilljs.com/1.3.4/quill.snow.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
    <link rel="stylesheet" href="css/form-elements.css">
   <link rel="stylesheet" href="css/style1.css">
   <title>MyNotes</title>
+
 </head>
 <body>
   <header>
@@ -35,26 +43,13 @@
     <div class="entry">
 <table border="0" width="100%">
 <tr><td width="18%" rowspan="2">
-<?php
-$std=$_SESSION['lstuno'];
-$db=mysqli_connect("localhost","root","","corridor1");
-$sql="SELECT*FROM user WHERE stu_no='$std'";
-$result=mysqli_query($db,$sql);
-while($row=mysqli_fetch_array($result)){  echo"<img src='./".$row['pro_pic']."'height='106px' width='106px' alt='avatar' >";} ?>
-
+<img src="images/udara.jpg" height='106px' width='106px' alt='avatar' >
+<h3>Udara Navarathna</h3>
 </td><td>
-<?php
-  $db=mysqli_connect("localhost","root","","corridor1");
-  $sql="SELECT*FROM user WHERE stu_no='$std'";
-  $result=mysqli_query($db,$sql);
-  while($row=mysqli_fetch_array($result)){  echo"<h2>".$row['fname']."\t".$row['lname']."</h2>";} ?>
+
   </td></tr>
   <tr><td colspan="2">
-    About Me <?php
-    $db=mysqli_connect("localhost","root","","corridor1");
-    $sql="SELECT*FROM user WHERE stu_no='$std'";
-    $result=mysqli_query($db,$sql);
-    while($row=mysqli_fetch_array($result)){  echo"<p>".$row['desp']."</p>";} ?> </td></tr>
+    Softwear Engineering Student. <br /> National Institute of Busines Management</td></tr>
 
 <tr><td colspan="2" align="right">
 
@@ -66,22 +61,42 @@ while($row=mysqli_fetch_array($result)){  echo"<img src='./".$row['pro_pic']."'h
   <input type="submit" value="Edit Profile">
 </form>
 
-<form action="logout.html" style="display: inline;">
-  <input type="submit" value="Logout">
-</form>
+<button>MAKE A NOTE</button>
+
+
 
 </td></tr>
 </table>
-
+<hr />
 
 
 
     </div>
   </div>
 
+  <div class="row">
+    <h1>My Notes</h1>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+          <div class="caption">
+            <a href="#"><h3>Html & Css</h3></a>
+            <p>...</p>
+            <p><a href="#" class="btn btn-default" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+          <div class="caption">
+            <a href="#"><h3>Java</h3></a>
+            <p>...</p>
+            <p><a href="#" class="btn btn-default" role="button">View</a> <a href="#" class="btn btn-default" role="button">Add</a></p>
+          </div>
+        </div>
+      </div>
 
+  </div>
 </div>
-
 
 
 <script src="js/jquery-2.1.4.min.js"></script>
