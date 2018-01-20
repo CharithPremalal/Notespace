@@ -34,10 +34,12 @@
   </nav>
   </header>
 
-<div class="container" id="main" style="position: relative;min-width: 1000px;">
+<div class="container" id="main">
+<div class="row">
 <h2 class="title">Make An Advertisement</h2>
-<form id="form1" name="form1" method="post" action="inputAdvt.php" enctype="multipart/form-data">
+<div class="col-lg-4 col-lg-offset-4">
 
+<form id="form1" name="form1" method="post" action="inputAdvt.php" enctype="multipart/form-data">
   <div class="form-group">
     <input type="text" name="fname" id="fname" placeholder="Full Name">
   </div>
@@ -62,8 +64,10 @@
       <input type="reset" name="reset" id="reset" value="Clear">          <input type="submit" name="submit" id="submit" value="Submit">
   </div>
   </form>
-</div>
 
+</div>
+</div>
+</div>
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
