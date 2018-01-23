@@ -20,6 +20,12 @@ textarea.form-control {
 
 textarea, 
 textarea.form-control {
+    height: 100px;
+}
+
+
+textarea, 
+textarea.form-control {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	line-height: 30px;
