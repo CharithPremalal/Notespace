@@ -47,8 +47,9 @@
                     <label>Group Name</label>
                   </div>
                   <div class="col-sm-8">
+
                     <div class="form-group">
-                      <input type="text" name="form-username" placeholder="Group Name" class="form-username form-control" id="#">
+                      <input type="text" name="username" placeholder="Group Name" class="form-username form-control" id="#">
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -56,7 +57,7 @@
                   </div>
                   <div class="col-sm-8">
                     <div class="form-group">
-                      <input type="text" name="form-username" placeholder="Group Description" class="form-username form-control" id="#">
+                      <input type="text" name="desc" placeholder="Group Description" class="form-username form-control" id="#">
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -67,6 +68,7 @@
                         <input type="text" class="form-control"  placeholder="Search For Friends" >
                         <span class="input-group-addon">
                             <button type="submit">
+
                                 <span class="glyphicon glyphicon-search"></span>
                             </button>
                         </span>
@@ -90,11 +92,12 @@
                     </div>
 
               </div>
-<br>
+<br>              <form name="grp" action="groupInput.php" method="POST">
                 <div class="col-sm-12 col-md-12">
                       <button type="submit" class="btn">Create Group</button>
                       <button type="reset" class="btn">Cancel</button>
                 </div>
+                    </form>
 
 
 
