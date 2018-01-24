@@ -8,59 +8,70 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/form-elements.css">
+    <link rel="stylesheet" href="css/file.css">
 
-  <title>MyNotes</title>
+  <title>Settings</title>
 
 </head>
 <body>
   <header>
   <div class="container"><h1><a href="home.html" id="title">NOTE|SPACE</a></h1></div>
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-
-      <ul class="nav navbar-nav navbar-left">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
         <li><a href="home.html">My Home</a></li>
-        <li><a href="notes.html">My Notes</a></li>
         <li><a href="groups.html">My Groups</a></li>
         <li><a href="profile.html">My Profile</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.html">Logout</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Options<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="promote.html">Advertise</a></li>
+            <li><a href="settings.html">Edit Profile</a></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
+  </div>
   </nav>
   </header>
 
 <div class="container" id="main">
+  <h2 class="title">Edit Profile</h2>
 
-
-  	<div class="post">
-  		<div class="entry">
-  		<table width="100%" border="0" cellpadding="5" align="center" >
-
-  			<tr><td width="18%"></td>
-  			<td width="82%" colspan="3"></td></tr>
-  			<tr><td align="right" style="vertical-align: top;">About</td><td>
-  			<br><input type="submit" name="abt" value="Save"></td></tr>
-  		</form>
-
-  		</table>
-  		</div>
-  	</div>
-
-    <div class="form-box">
+    <div class="form-box col-sm-12 col-md-4">
+      <label>Change Profile Picture</label>
       <form name="picAndDis" method="POST" action="inputprofile.php"  enctype="multipart/form-data">
       <div class="form-group">
-        <img src="avatar.png" style="height:106px;width:106px" alt="Avatar"><input type="file" name="propic">
-        <input type="password" required maxlength="20" minlength="6" name="cpw">
+
+        <img src="images/udara.jpg" style="height:106px;width:106px" alt="Avatar">
+        <label class="fileContainer">
+            Upload
+            <input type="file"/>
+        </label>
+        <input type="submit" name="abt" value="Save">
       </div>
+
+    </form>
+    </div>
+
+    <div class="form-box col-sm-12 col-md-4">
+      <label>Change Your Bio</label>
+      <form name="picAndDis" method="POST" action="inputprofile.php"  enctype="multipart/form-data">
+
       <div class="form-group">
-        <h2>I'm Udara Navarathna</h2>
-      <textarea name="about" placeholder="Short Description About Yourself..."></textarea>
-      </div>
-      <div class="form-group">
-        <label>Confirm Password</label>
-        <input type="password" required maxlength="20" minlength="6" name="vpw">
+
+      <textarea name="about" placeholder="Short Description About Yourself..." style="height:180px"></textarea>
       </div>
       <div class="form-group">
         <input type="submit" name="abt" value="Save"> <input type="reset" value="Clear">
@@ -68,26 +79,27 @@
     </form>
     </div>
 
-    <div class="form-box">
+    <div class="form-box col-sm-12 col-md-4">
+      <label>Change Profile Password</label>
       <form name="changepw" method="post" action="changepw.php">
-    <h2 class="title">Edit Profile</h2>
+
       <div class="form-group">
-        <label>Current Password</label>
-        <input type="password" required maxlength="20" minlength="6" name="cpw">
+        <input type="password"  placeholder="Current Password" required maxlength="20" minlength="6" name="cpw">
       </div>
       <div class="form-group">
-        <label>New Password</label>
-        <input type="password" required maxlength="20" minlength="6" name="npw">
+
+        <input type="password" placeholder="New Password" required maxlength="20" minlength="6" name="npw">
       </div>
       <div class="form-group">
-        <label>Confirm Password</label>
-        <input type="password" required maxlength="20" minlength="6" name="vpw">
+
+        <input type="password" placeholder="Confirm Password" required maxlength="20" minlength="6" name="vpw">
       </div>
       <div class="form-group">
         <input type="submit" name="abt" value="Save"> <input type="reset" value="Clear">
       </div>
     </form>
     </div>
+
 </div>
 
 

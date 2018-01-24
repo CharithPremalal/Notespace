@@ -7,128 +7,138 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
    <link rel="stylesheet" href="css/form-elements.css">
-  <link rel="stylesheet" href="css/style1.css">
-  <title>MyNotes</title>
+
+  <title>Groups</title>
 </head>
 <body>
   <header>
   <div class="container"><h1><a href="home.html" id="title">NOTE|SPACE</a></h1></div>
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-
-      <ul class="nav navbar-nav navbar-left">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
         <li><a href="home.html">My Home</a></li>
-        <li><a href="notes.html">My Notes</a></li>
         <li><a href="groups.html">My Groups</a></li>
         <li><a href="profile.html">My Profile</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.html">Logout</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Options<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="promote.html">Advertise</a></li>
+            <li><a href="settings.html">Edit Profile</a></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>
   </header>
 
-<div class="container" id="main">
+<div class="container" id="main" style="background-color:rgba(0, 0, 0, 0);">
+  <div class="row">
+    <div class="col-sm-12 col-md-12" style="padding:20px">
+    <img src="images/ad.jpg" alt="..." height="100px">
+    </div>
+
+
+    <div class="panel panel-default col-sm-6 col-md-6" style="margin-left:-20px;margin-right:10px;">
+          <div class="panel-body" >
+
+                <h3>Create Group</h3>
+
+                <div class="row">
+
+                  <div class="col-sm-4">
+                    <label>Group Name</label>
+                  </div>
+                  <div class="col-sm-8">
+
+                    <div class="form-group">
+                      <input type="text" name="username" placeholder="Group Name" class="form-username form-control" id="#">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <label>Group Description</label>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="form-group">
+                      <input type="text" name="desc" placeholder="Group Description" class="form-username form-control" id="#">
+                    </div>
+                  </div>
+
+                </div>
+                <br>            
+<br>              <form name="grp" action="groupInput.php" method="POST">
+                <div class="col-sm-12 col-md-12">
+                      <button type="submit" class="btn">Create Group</button>
+                      <button type="reset" class="btn">Cancel</button>
+                </div>
+                    </form>
+
+
+
+
+
+          </div>
+        </div>
+
+
+
+        <div class="panel panel-default col-sm-6 col-md-6" >
+
+
+<div class="panel-body ">
+<h3>Add New Member</h3>
   <div class="row">
 
-  <div class="col-sm-6 col-md-6" id="box">
-      <h3>Create Group</h3>
+<div class="col-sm-6">
+<label>Select a Group</label>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<select class="selectpicker form-control">
+  <option>HND SE</option>
+  <option>HND CBIS</option>
 
-      <div class="row">
+</select>
+</div>
+</div>
+<div class="col-sm-4">
+  <label>Add People</label>
+</div>
+<div class="input-group add-on col-sm-8">
+  <input class="form-control" placeholder="Search Friends" name="srch-term" id="srch-term" type="text" >
+  <div class="input-group-btn">
+    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+  </div>
+</div>
+</div>
+<br>
+<div class="scroll">
 
-        <div class="col-sm-4">
-          <label>Group Name</label>
-        </div>
-        <div class="col-sm-8">
-          <div class="form-group">
-            <input type="text" name="form-username" placeholder="Group Name" class="form-username form-control" id="#">
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <label>Group Description</label>
-        </div>
-        <div class="col-sm-8">
-          <div class="form-group">
-            <input type="text" name="form-username" placeholder="Group Description" class="form-username form-control" id="#">
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <label>Add People</label>
-        </div>
-        <div class="col-sm-8">
-          <div class="input-group stylish-input-group">
-              <input type="text" class="form-control"  placeholder="Search For Friends" >
-              <span class="input-group-addon">
-                  <button type="submit">
-                      <span class="glyphicon glyphicon-search"></span>
-                  </button>
-              </span>
-          </div>
-        </div>
+<div class="col-sm-6 col-md-3" >
+<div class="thumbnail" id="friend">
+  <img src="images/richard.jpg" alt="...">
+    <h5>Mark Richie</h5>
+</div>
+</div>
 
-      </div>
+</div>
+<br>
+<button type="submit" class="btn">Add</button>
 
-
-
-
-      <br>
-    <div class="scroll">
-
-      <div class="col-sm-6 col-md-3" >
-            <div class="thumbnail" id="friend">
-              <img src="images/richard.jpg" alt="...">
-                <h5>Mark Richie</h5>
-            </div>
-          </div>
-      <div class="col-sm-6 col-md-3">
-            <div class="thumbnail" id="friend">
-                <img src="images/mihindu.jpg" alt="...">
-                <h5>Pasan Mihindu</h5>
-           </div>
-      </div>
-      <div class="col-sm-6 col-md-3">
-            <div class="thumbnail" id="friend">
-                <img src="images/udara.jpg" alt="...">
-                <h5>Udara Navarathna</h5>
-           </div>
-      </div>
-      <div class="col-sm-6 col-md-3">
-            <div class="thumbnail" id="friend">
-                <img src="images/charith.jpg" alt="...">
-                <h5>Charith </h5>
-           </div>
-      </div>
-
-    </div>
-    <br>
-    <button type="submit" class="btn">Create Group</button>
-    <button type="reset" class="btn">Cancel</button>
-    <br><br>
+</div>
   </div>
 
-
-
-  <div class="col-sm-6 col-md-6" id="box">
-      <h3>My Groups</h3>
-          <div class="row">
-
-    <div class="col-sm-6">
-    <label>Select a Group</label>
-    </div>
-    <div class="col-sm-6">
-      <div class="form-group">
-        <select class="selectpicker form-control">
-          <option>HND SE</option>
-          <option>HND CBIS</option>
-
-        </select>
-      </div>
-    </div>
-  </div>
-<button type="submit" class="btn">Delete Group</button>
-
-  </div>
 
   </div>
 </div>

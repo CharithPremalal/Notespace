@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,94 +8,65 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/form-elements.css">
-  <link rel="stylesheet" href="css/style1.css">
-    <link rel="stylesheet" href="css/comment.css">
-  <title>MyNotes</title>
-
+    <link rel="stylesheet" href="css/ads.css">
+  <title>Status</title>
 </head>
 <body>
   <header>
   <div class="container"><h1><a href="home.html" id="title">NOTE|SPACE</a></h1></div>
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-
-      <ul class="nav navbar-nav navbar-left">
-        <li><a href="home.html">My Home</a></li>
-        <li><a href="notes.html">My Notes</a></li>
-        <li><a href="groups.html">My Groups</a></li>
-        <li><a href="profile.html">My Profile</a></li>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="status.html">Statistics</a></li>
+        <li><a href="advertise.html">Advertising</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.html">Logout</a></li>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>
   </header>
 
 <div class="container" id="main" style="position: relative;min-width: 1000px;">
-<h2 class="title">Make An Advertisement</h2>
-<form id="form1" name="form1" method="post" action="inputAdvt.php" enctype="multipart/form-data">
-<table align="center">
-<tr>
-<td>
-  <div class="form-group">
-    <label>Contact Person</label>
-  </div>
-  <div class="form-group">
-    <label>E-mail</label>
-  </div>
-  <div class="form-group">
-    <label>Phone Number</label>
-  </div>
-  <div class="form-group">
-    <label>Company Name</label>
-  </div>
+<div class="row">
+  <h2 class="title">Ad Requests</h2>
 
-  <div class="form-group">
-    <label>Ad Description</label>
-  </div>
-  <div class="form-group">
-    <label>Attach Image</label>
-  </div>
-  </td>
-<td>
+    <div class="row">
 
-  <div class="form-group">
-    <input type="text" name="fname" id="fname" placeholder="Full Name">
-  </div>
-  <div class="form-group">
+      <div class="shadow">
+        <div class="col-sm-12">
+          <div class="col-sm-6">
+            <img src="images/ad.jpg" height="120px">
+          </div>
 
-    <input type="text" name="email" id="email" placeholder="name@example.com">
-  </div>
-  <div class="form-group">
+          <div class="col-sm-4">
+            Description
+          </div>
 
-    <input type="text" name="number" id="number">
-  </div>
-  <div class="form-group">
+          <div class="col-sm-2">
+            <button>Confirm</button>
+            <br><br>
+            <button>Cancel</button>
 
-    <input type="text" name="company" id="number">
-  </div>
+          </div>
 
-  <div class="form-group">
+        </div>
+        <div class="clearfix"></div>
 
-    <textarea name="textarea" id="textarea"></textarea>
-  </div>
-  <div class="form-group">
-  <input type="file" name="advt">
-
-  </div>
+      </div>
+    </div>
 
 
-  </td>
-</tr>
-<tr><td>
-  <div class="form-group">
-    <input type="reset" name="reset" id="reset" value="Clear">          <input type="submit" name="submit" id="submit" value="Submit">
-  </div>
-</td>
-  </tr>
-  </table>
-  </form>
+</div>
 </div>
 
 <script src="js/jquery-2.1.4.min.js"></script>

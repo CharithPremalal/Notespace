@@ -1,9 +1,9 @@
-@import url(//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css);
+
 
 .detailBox {
-
+    background-color:#ffffff;
     border:1px solid #bbb;
-    margin:50px;
+    margin:10px;
 }
 .titleBox {
     background-color:#fdfdfd;
@@ -20,7 +20,7 @@
     border-top:1px dotted #bbb;
 }
 .commentBox .form-group:first-child, .actionBox .form-group:first-child {
-    width:80%;
+    width:100%;
 }
 .commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
     width:18%;

@@ -23,21 +23,32 @@ header{
 background-color: white;
 }
 
-.navbar-default {
-  
-border: none;
-
+.navbar.navbar.navbar-inverse {
 background-color:darkred;
+border:none;
 }
-
 .nav.navbar-nav li a {
 color: white;
 font-family:verdana;
 font-weight: bold;
 }
+
 .nav.navbar-nav li a:hover{
 color: darkred;
 background-color:white;
+}
+.nav.navbar-nav li a:focus{
+color: darkred;
+background-color:white;
+}
+.nav.navbar-nav dropdown-toggle{
+color: darkred;
+background-color:white;
+}
+
+.navbar-inverse .dropdown-menu{
+color: white;
+background-color:darkred;
 }
 
 header {
