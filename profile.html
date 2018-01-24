@@ -18,19 +18,33 @@
 <body>
   <header>
   <div class="container"><h1><a href="home.html" id="title">NOTE|SPACE</a></h1></div>
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-
-      <ul class="nav navbar-nav navbar-left">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
         <li><a href="home.html">My Home</a></li>
-        <li><a href="notes.html">My Notes</a></li>
         <li><a href="groups.html">My Groups</a></li>
         <li><a href="profile.html">My Profile</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.html">Logout</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Options<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="promote.html">Advertise</a></li>
+            <li><a href="settings.html">Edit Profile</a></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
+  </div>
   </nav>
   </header>
 
