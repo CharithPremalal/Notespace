@@ -29,106 +29,110 @@
   </nav>
   </header>
 
-<div class="container" id="main">
+<div class="container" id="main" style="background-color:rgba(0, 0, 0, 0);">
   <div class="row">
 
-  <div class="col-sm-6 col-md-6" id="box">
-      <h3>Create Group</h3>
 
-      <div class="row">
+    <div class="panel panel-default col-sm-6 col-md-6">
+          <div class="panel-body" >
 
-        <div class="col-sm-4">
-          <label>Group Name</label>
-        </div>
-        <div class="col-sm-8">
-          <div class="form-group">
-            <input type="text" name="form-username" placeholder="Group Name" class="form-username form-control" id="#">
+                <h3>Create Group</h3>
+
+                <div class="row">
+
+                  <div class="col-sm-4">
+                    <label>Group Name</label>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="form-group">
+                      <input type="text" name="form-username" placeholder="Group Name" class="form-username form-control" id="#">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <label>Group Description</label>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="form-group">
+                      <input type="text" name="form-username" placeholder="Group Description" class="form-username form-control" id="#">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <label>Add People</label>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="input-group stylish-input-group">
+                        <input type="text" class="form-control"  placeholder="Search For Friends" >
+                        <span class="input-group-addon">
+                            <button type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+
+                <br>
+              <div class="scroll">
+
+                <div class="col-sm-6 col-md-3" >
+                      <div class="thumbnail" id="friend">
+                        <img src="images/richard.jpg" alt="...">
+                          <h5>Mark Richie</h5>
+                      </div>
+                    </div>
+
+              </div>
+              <br>
+              <button type="submit" class="btn">Create Group</button>
+              <button type="reset" class="btn">Cancel</button>
+              <br><br>
+
           </div>
         </div>
-        <div class="col-sm-4">
-          <label>Group Description</label>
-        </div>
-        <div class="col-sm-8">
-          <div class="form-group">
-            <input type="text" name="form-username" placeholder="Group Description" class="form-username form-control" id="#">
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <label>Add People</label>
-        </div>
-        <div class="col-sm-8">
-          <div class="input-group stylish-input-group">
-              <input type="text" class="form-control"  placeholder="Search For Friends" >
-              <span class="input-group-addon">
-                  <button type="submit">
-                      <span class="glyphicon glyphicon-search"></span>
-                  </button>
-              </span>
-          </div>
-        </div>
-
-      </div>
+<div class="col-sm-1 col-md-1"></div>
 
 
+        <div class="panel panel-default col-sm-5 col-md-5">
 
 
-      <br>
-    <div class="scroll">
+<div class="panel-body ">
+<h3>Add New Member</h3>
+  <div class="row">
 
-      <div class="col-sm-6 col-md-3" >
-            <div class="thumbnail" id="friend">
-              <img src="images/richard.jpg" alt="...">
-                <h5>Mark Richie</h5>
-            </div>
-          </div>
-      <div class="col-sm-6 col-md-3">
-            <div class="thumbnail" id="friend">
-                <img src="images/mihindu.jpg" alt="...">
-                <h5>Pasan Mihindu</h5>
-           </div>
-      </div>
-      <div class="col-sm-6 col-md-3">
-            <div class="thumbnail" id="friend">
-                <img src="images/udara.jpg" alt="...">
-                <h5>Udara Navarathna</h5>
-           </div>
-      </div>
-      <div class="col-sm-6 col-md-3">
-            <div class="thumbnail" id="friend">
-                <img src="images/charith.jpg" alt="...">
-                <h5>Charith </h5>
-           </div>
-      </div>
+<div class="col-sm-6">
+<label>Select a Group</label>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<select class="selectpicker form-control">
+  <option>HND SE</option>
+  <option>HND CBIS</option>
 
-    </div>
-    <br>
-    <button type="submit" class="btn">Create Group</button>
-    <button type="reset" class="btn">Cancel</button>
-    <br><br>
+</select>
+</div>
+</div>
+</div>
+<br>
+<div class="scroll">
+
+<div class="col-sm-6 col-md-3" >
+<div class="thumbnail" id="friend">
+  <img src="images/richard.jpg" alt="...">
+    <h5>Mark Richie</h5>
+</div>
+</div>
+
+</div>
+<br>
+<button type="submit" class="btn">Add</button>
+
+</div>
   </div>
 
-
-
-  <div class="col-sm-6 col-md-6" id="box">
-      <h3>My Groups</h3>
-          <div class="row">
-
-    <div class="col-sm-6">
-    <label>Select a Group</label>
-    </div>
-    <div class="col-sm-6">
-      <div class="form-group">
-        <select class="selectpicker form-control">
-          <option>HND SE</option>
-          <option>HND CBIS</option>
-
-        </select>
-      </div>
-    </div>
-  </div>
-<button type="submit" class="btn">Delete Group</button>
-
-  </div>
 
   </div>
 </div>
