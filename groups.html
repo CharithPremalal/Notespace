@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
    <link rel="stylesheet" href="css/form-elements.css">
-  <link rel="stylesheet" href="css/style1.css">
+
   <title>Groups</title>
 </head>
 <body>
@@ -74,38 +74,9 @@
                       <input type="text" name="desc" placeholder="Group Description" class="form-username form-control" id="#">
                     </div>
                   </div>
-                  <div class="col-sm-4">
-                    <label>Add People</label>
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="input-group stylish-input-group">
-                        <input type="text" class="form-control"  placeholder="Search For Friends" >
-                        <span class="input-group-addon">
-                            <button type="submit">
-
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </span>
-                    </div>
-
-                  </div>
 
                 </div>
-
-
-
-
-                <br>
-              <div class="scroll">
-
-                <div class="col-sm-6 col-md-3" >
-                      <div class="thumbnail" id="friend">
-                        <img src="images/richard.jpg" alt="...">
-                          <h5>Mark Richie</h5>
-                      </div>
-                    </div>
-
-              </div>
+                <br>            
 <br>              <form name="grp" action="groupInput.php" method="POST">
                 <div class="col-sm-12 col-md-12">
                       <button type="submit" class="btn">Create Group</button>
@@ -140,6 +111,15 @@
 
 </select>
 </div>
+</div>
+<div class="col-sm-4">
+  <label>Add People</label>
+</div>
+<div class="input-group add-on col-sm-8">
+  <input class="form-control" placeholder="Search Friends" name="srch-term" id="srch-term" type="text" >
+  <div class="input-group-btn">
+    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+  </div>
 </div>
 </div>
 <br>
