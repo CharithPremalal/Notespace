@@ -41,10 +41,14 @@ background-color:white;
 color: darkred;
 background-color:white;
 }
-
-.navbar-inverse .navbar-toggle {
+.nav.navbar-nav dropdown-toggle{
 color: darkred;
 background-color:white;
+}
+
+.navbar-inverse .dropdown-menu{
+color: white;
+background-color:darkred;
 }
 
 header {
