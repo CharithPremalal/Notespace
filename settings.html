@@ -53,7 +53,39 @@
       <form name="picAndDis" method="POST" action="inputprofile.php"  enctype="multipart/form-data">
       <div class="form-group">
         <img src="images/udara.jpg" style="height:106px;width:106px" alt="Avatar">
-        <input type="file" name="myfile">
+
+
+
+        <style>
+          .upload-btn-wrapper {
+          position: relative;
+          overflow: hidden;
+          display: inline-block;
+        }
+        
+        .btn {
+          border: 0px solid gray;
+          color: gray;
+          background-color: none;
+          padding: 0px 0px;
+          border-radius: 8px;
+          font-size: 10px;
+          font-weight: bold;
+        }
+        
+        .upload-btn-wrapper input[type=file] {
+          font-size: 100px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          opacity: 0;
+        }
+          </style>
+
+        <div class="upload-btn-wrapper">
+          <input type="image" class="btn" src="upload-arrow_318-26670.jpg" name="image" width="20" height="25">
+           <input type="file" name="myfile" />
+        </div>
         <input type="submit" name="abt" value="Upload">
       </div>
 
