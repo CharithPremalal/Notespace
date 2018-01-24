@@ -3,7 +3,7 @@
     $user="root";
     $server="localhost";
     $password="";
-    $db="notespace_0.1";
+    $db="notespace";
   
 
 

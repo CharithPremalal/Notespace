@@ -5,10 +5,10 @@
 if(isset($_POST['send_code']))
 {
     $c_code= $_POST['code'];
-    $user="root";
     $server="localhost";
-    $password="";
-    $db="notespace_0.1";
+    $user="charith";
+    $password="lakshitha";
+    $db="notespace";
     
     $con= new mysqli($server,$user,$password,$db);
     $sql="SELECT*FROM temp_user WHERE email='$email'";//fetch query from temp user
@@ -40,7 +40,7 @@ if($c_code==$code)//comparing codes
     if($con->query($qry)==true)//sending values to user table
     {
        
-      //header("Location:con_code.php");to the profile page
+      header('Location:profile.html');
     }
     else
     {

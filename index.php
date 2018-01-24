@@ -11,9 +11,90 @@
   <link href="css/landing-page.css" rel="stylesheet">
 
 
-  <title>Bootstrap</title>
+  <title>NoteSpace</title>
 </head>
 <body>
+  <?php
+    session_start();
+    $server="localhost";
+    $user="charith";
+    $password="lakshitha";
+    $db="notespace";
+
+
+
+ if(isset($_POST['click'])){
+
+
+
+    $fname = $_POST["fname"];
+    $lname = $_POST["lname"];
+    $email = $_POST["email"];
+    $pwrd = $_POST["password"];
+    $cpwrd = $_POST["confirm_pwrd"];//i have changed the wrong name
+
+
+
+    function generatePin($digits)//generate the login code
+    {
+        $i = 0;//counter
+        $pin="";
+        while ($i<$digits)
+        {
+            $pin .= mt_rand(0, 9);
+            $i++;
+        }
+        return $pin;
+    }
+
+    $code= generatePin(4); //change the number to change the length of the query
+
+     //setting up for the email
+     $from = "admin@notespace.xyz"; //change this address when we get the server.
+     $subject  =   $code;
+    $message  =   $code;
+     $headers  = "From: $email\r\n";
+     $headers .= "Reply-To: $email\r\n";
+
+     //setting up values for the database
+     $con= new mysqli($server,$user,$password,$db);
+     $qry="INSERT INTO temp_user(fname, lname, email, password, code) VALUES ('$fname','$lname','$email','$pwrd','$code')"; //insert query to temp_reg table
+
+
+if($pwrd==$cpwrd)
+{
+
+
+    if(mysqli_query($con,$qry))
+    {
+        echo "Data Inserted";
+        $_SESSION["email"]=$email;
+
+        if(mail($email, $subject, $message, $headers))
+        {
+            header("location:confirm.php");
+        }
+        else
+        {
+           $errr_message="Email server error";
+        }
+
+    }
+    else
+    {
+       $errr_message="Database error";
+    }
+
+}
+else
+{
+    $error_message = "password doesnt match";
+}
+
+}
+
+
+?>
   <header>
   <div class="container"><h1><a href="home.html" id="title">NOTE|SPACE</a></h1></div>
   <nav class="navbar navbar-default" role="navigation">
@@ -84,34 +165,35 @@
                         </div>
                         </div>
                         <div class="form-bottom">
-                      <form role="form" action="" method="post" class="registration-form">
+                      <form id="reg" method="post" action="./register.php">
                         <div class="form-group">
                           <label class="sr-only" for="form-first-name">First name</label>
-                            <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
+                            <input type="text" placeholder="First Name" required name="fname">
                           </div>
                           <div class="form-group">
                             <label class="sr-only" for="form-last-name">Last name</label>
-                            <input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
+                            <input type="text" placeholder="Last Name" required name="lname">
                           </div>
                           <div class="form-group">
                             <label class="sr-only" for="form-email">Email</label>
-                            <input type="email" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                            <input type="email" placeholder="E-mail" required name="email">
                           </div>
                           <div class="form-group">
                             <label class="sr-only" for="form-password">Password</label>
-                            <input type="password" name="form-password" placeholder="Enter Password" class="form-password form-control" id="form-password">
+                            <input type="password" placeholder="Password" required name="password" minlength="6" maxlength="25" id="password">
                           </div>
                           <div class="form-group">
                             <label class="sr-only" for="form-password">Re-Enter Password</label>
-                            <input type="password" name="form-password" placeholder="Re-Enter Password" class="form-password form-control" id="form-password">
+                            <input type="password" placeholder="Confirm password" required name="confirm_pwrd" minlength="6" maxlength="25"
+                   id="confirm_password"><br><div id="alert">
+                       <?php if(isset($error_message)){echo $error_message;} ?>
+                   </div>
                           </div>
-                          <div class="form-group">
-                            <label class="sr-only" for="form-about-yourself">About yourself</label>
-                            <textarea name="form-about-yourself" placeholder="About yourself..."
-                                  class="form-about-yourself form-control" id="form-about-yourself"></textarea>
-                          </div>
-                          <button type="submit" class="btn">Sign me up!</button>
+                          <input type="submit" id="click" name="click" value="Sign Up">
                       </form>
+                      <div id="alert2">
+<?php if(isset($errr_message)){echo $errr_message;}?>
+</div>
                     </div>
                     </div>
 
