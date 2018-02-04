@@ -1,0 +1,116 @@
+#container 
+{  
+    width:1200px; 
+    margin:0 auto;
+    overflow:auto;
+
+}
+body
+{
+    background-image: url("asd.jpg");
+}
+.nav input[type=text], .nav input[type=password]
+{
+    width:20%;
+    margin: 0px 0;
+}
+input[type=text], input[type=password], input[type=email], textarea, select
+{
+    border-radius: 5px;
+    width:100%;
+    padding: 12px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+input[type=submit], input[type=reset], button, input[type=button]
+{
+    background-color: #0081b1;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input[type=submit]:hover, input[type=reset]:hover 
+{
+	box-shadow: 0px 2px 5px grey;
+	background-color: #4db6dd;
+
+}
+h1 {
+        display: inline-block;
+	font-family:verdana;
+	color: white;
+	font-size:40px;
+}
+h2
+{	
+  font-family: 'Oswald', sans-serif;
+
+}
+header {
+	height:150px;
+	color: white;
+	background-color: #2c4762;
+	text-align: center;
+}
+article {
+
+	margin-top:20px;
+	float:center;
+        overflow:auto;
+	margin-left:auto;
+	margin-right:auto;
+	width: 1200px;
+	height:700px;
+
+
+}
+.nav ul {
+
+	list-style: none;
+	background-color: #0081b1;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+.post {
+	width:350px;
+	border-radius: 5px;
+	box-shadow: 0px 2px 5px grey;
+	background-color: #ffffff;
+	margin-top: 20px;
+	padding: 15px;
+
+}
+
+.slideshow {
+margin-top:20px;
+position: relative; 
+z-index:1;
+
+}
+a
+{
+    color: white;
+    text-decoration: none;
+}
+#quote {
+    position: absolute; 
+    top: 0px; 
+    color: white;
+    background-color:rgba(0,0,0,0.6)  ;
+
+} 
+
+
+
+
+
+ 
+ 
+
+

@@ -1,0 +1,17 @@
+table{
+border-collapse: separate;
+
+text-align: center;
+}
+th{
+background-color: #0081b1;
+}
+tr.odd{
+background-color: #d9e1f2;
+}
+tr.even{
+background-color: #b4c6e7;
+}
+td{
+margin: 3pt;
+}
